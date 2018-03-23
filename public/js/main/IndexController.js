@@ -23,10 +23,6 @@ IndexController.prototype._openSocket = function() {
     socketUrl.search = 'since=' + latestPostDate.valueOf();
   }
 
-  // this is a little hack for the settings page's tests,
-  // it isn't needed for Wittr
-  socketUrl.search += '&' + location.search.slice(1);
-
   var ws = new WebSocket(socketUrl.href);
 
   // add listeners
