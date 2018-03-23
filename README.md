@@ -19,3 +19,5 @@ npm run serve -- --server-port=8000 --config-server-port=8001
 ```
 
 * If you get any node-sass errors, try running `npm rebuild node-sass --force` or the remove `node_modules` folder and run `npm install` again
+
+git remote set-url origin https://aber866:32Va57AL@github.com/aber866/offline-first-timeline.git

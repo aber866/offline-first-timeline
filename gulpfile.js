@@ -100,7 +100,9 @@ gulp.task('js:server', function () {
 
 gulp.task('templates:server', function () {
   return gulp.src('templates/*.hbs')
-    .pipe(plugins.handlebars())
+    .pipe(plugins.handlebars({
+      handlebars: require('handlebars')
+    }))
     .on('error', plugins.util.log.bind(plugins.util))
     .pipe(through.obj(function(file, enc, callback) {
       // Don't want the whole lib
